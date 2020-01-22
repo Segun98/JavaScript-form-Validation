@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="header">
+        <h2>Login to your account</h2>
+    </section>
+    <section class="forms" style="margin: auto; width: 80%">
+        <form autocomplete="on" style="padding: 20px">
+            <div class="error-empty">pls fill in all fields</div>
+            <div class="form-wrap">
+                <label for="name">Username:</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="form-wrap">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="form-wrap">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password">
+            </div>
+            <div class="error-match">passwords must match</div>
+            <br>
+            <div class="submit">
+                <button type="submit" id="submit-btn">Login</button>
+            </div>
+            <div class="error-min">minimum of 7 characters in each field</div>
+        </form>
+    </section>
+    <section class="errors-expected" style="margin: auto; width: 80%">
+        <h3>Programmed Errors</h3>
+        <ul>
+            <li>Empty Fields</li>
+            <li>Unmatched passwords</li>
+            <li>Less than seven characters</li>
+        </ul>
+    </section>
+
+    <section class="modal">
+        <div class="modal-wrap">
+            <div class="modal-mssg">
+                <p style="color: green;">YOUR INPUTS WERE CORRECT!</p>
+                <p style="color:brown">The point is to trigger errors though, try to trigger them (if you have not) :-)
+                </p>
+            </div>
+            <div class="close-modal">
+                <button>Close</button>
+            </div>
+        </div>
+    </section>
+    <footer style="margin-top: 50px; text-align: center;">
+        By <a href="segunos.tk" target="blank">SegunOS</a>
+    </footer>
+</body>
+<script src="app.js"></script>
+
+</html>
