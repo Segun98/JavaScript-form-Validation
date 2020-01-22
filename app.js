@@ -44,3 +44,26 @@ function submit(e) {
     }
 
 }
+
+// The time at the top
+
+function writeTime() {
+    let time = document.querySelector('.time')
+    let result = new Date().toLocaleTimeString()
+    time.textContent = `${result}`
+}
+setInterval(() => {
+    writeTime()
+}, 1000);
+
+//Secondds counter at the bottom
+
+let initial = 0;
+let seconds = document.querySelector('.seconds')
+
+function writeSeconds() {
+    seconds.textContent = initial++
+}
+setInterval(() => {
+    writeSeconds()
+}, 1000);
